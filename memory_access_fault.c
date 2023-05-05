@@ -11,6 +11,9 @@ static int __init loading(void)
     // Trying to access an address of memory that is invalid or restricted.
     volatile int *memory = (int *)0xFFFFFFFF;
 
+    // Printing the kernel module fault information.
+    printk(KERN_INFO "Value at 0xFFFFFFFF: %d\n", *memory);
+
     return 0;   // Here we are returning 0;
 }
 
