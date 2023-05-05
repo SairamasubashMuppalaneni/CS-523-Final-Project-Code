@@ -12,6 +12,9 @@ static int __init loading(void)
     int one = 1;
     int zero = 0;
     int fault = one / zero;
+    
+    // Printing the kernel module fault information.
+    printk(KERN_INFO "1 / 0 = %d\n", fault);
 
     return 0;   // Here we are returning 0;
 }
