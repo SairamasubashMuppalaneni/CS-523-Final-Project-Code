@@ -19,6 +19,9 @@ static int __init loading(void)
         // Assigning the letter S to every element in the bufferExaustion array.
         bufferExaustion[bufferInteger] = 'S';
     }
+    
+    // Printing the Kernel module fault information.
+    printk(KERN_INFO "Buffer Overflow: %s\n", bufferExaustion);
 
     return 0;   // Here we are returning 0;
 }
